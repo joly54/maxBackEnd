@@ -1,7 +1,6 @@
 import os
 import os.path as op
 
-from flasgger import Swagger
 from flask import Flask, send_from_directory, request
 from flask_admin import Admin
 from flask_admin.contrib.fileadmin import FileAdmin
