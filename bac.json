@@ -1,0 +1,184 @@
+[
+  {
+    "id": 2,
+    "name": "UNIQUE REVERSIBLE JACKET OFF WHITE / GREEN CHECKED",
+    "price": 3000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/photo_2023-07-20_22-57-56_1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "GROOVE CREWNECK KNIT WHITE / GREEN",
+    "price": 2000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/groove-crewneck-knit-white-green.jpg"
+  },
+  {
+    "id": 4,
+    "name": "ABSTRACT PIQUE POLO WHITE / BLUE",
+    "price": 2500,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/abstract-polo-white-blue.jpg"
+  },
+  {
+    "id": 5,
+    "name": "UNIQUE REVERSIBLE JACKET OFF WHITE / GREEN CHECKED\t",
+    "price": 3000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/abaa7bed7aa9b9d492a62cbacf074d482fea3144-2000x3000.jpg"
+  },
+  {
+    "id": 6,
+    "name": "UNIQUE REVERSIBLE JACKET OFF WHITE / GREEN CHECKED\t",
+    "price": 3000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/20e9724e8a174671e7504ff3ac805d92b8c13536-2000x3000.jpg"
+  },
+  {
+    "id": 7,
+    "name": "OMBRELLA SHIRT",
+    "price": 1400,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/ombrella-shirt-multico.jpg"
+  },
+  {
+    "id": 8,
+    "name": "CAMPUS TEE WHITE",
+    "price": 1000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/classic-denim-short-washed-dark-grey.jpg"
+  },
+  {
+    "id": 9,
+    "name": "CAMPUS TEE WHITE",
+    "price": 1000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/outdoor-cargo-pant-beige.jpg"
+  },
+  {
+    "id": 10,
+    "name": "CAMPUS TEE WHITE",
+    "price": 1000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/sol-colo-hoodie-black.jpg"
+  },
+  {
+    "id": 11,
+    "name": "CAMPUS TEE WHITE",
+    "price": 1000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/campus-tee-white.jpg"
+  },
+  {
+    "id": 12,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/stitch-ls-shirt-black.jpg"
+  },
+  {
+    "id": 13,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/road-cap-black.jpg"
+  },
+  {
+    "id": 14,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/rando-tracksuit-jacket-beige.jpg"
+  },
+  {
+    "id": 15,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/helas-slides-green.jpg"
+  },
+  {
+    "id": 16,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/helas-slides-green.jpg"
+  },
+  {
+    "id": 17,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/d55d3ddde50b7ad81d3054e1cf06095514c9c400-2000x3000.jpg"
+  },
+  {
+    "id": 18,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/c71ffdea6ba550c9a85ed22679e6cf9ae0ab7735-2000x3000.jpg"
+  },
+  {
+    "id": 19,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/bateau-tee-whitepastel-green.jpg"
+  },
+  {
+    "id": 20,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/7b817250375b7d696b4ab9b219ae48723ab41941-2000x3000.jpg"
+  },
+  {
+    "id": 21,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/654b799f6ecb0b19d18ded1e298ad4d27e103723-2000x3000.jpg"
+  },
+  {
+    "id": 22,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/35ccb1103c9c4d61483c1cdd5b293de698df6c0d-2000x3000.jpg"
+  },
+  {
+    "id": 23,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/studio-ls-polo-off-white.jpg"
+  },
+  {
+    "id": 24,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/moonset-hoodie-brown.jpg"
+  },
+  {
+    "id": 25,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/coog-crewneck-knit-beige.jpg"
+  },
+  {
+    "id": 26,
+    "name": "RANDO HOODED JACKET BEIGE",
+    "price": 4000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/classic-sweat-short-khaki.jpg"
+  },
+  {
+    "id": 27,
+    "name": "CAMPUS TEE WHITE",
+    "price": 2000,
+    "description": "text",
+    "image": "https://nothingtosay322.pythonanywhere.com/static/d55d3ddde50b7ad81d3054e1cf06095514c9c400-2000x3000.jpg"
+  }
+]
