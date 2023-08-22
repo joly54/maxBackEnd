@@ -1,19 +1,19 @@
 import json
-import os
 import os.path as op
 import pprint
 
+from flasgger import Swagger
 from flask import Flask, send_from_directory, request
 from flask_admin import Admin
 from flask_admin.contrib.fileadmin import FileAdmin
 from flask_admin.contrib.sqla import ModelView
+from flask_babel import Babel
 from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_restful import Api, Resource
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import ForeignKey, func
-from flask_babel import Babel
-from flasgger import Swagger
+from sqlalchemy.sql.elements import and_
 
 app = Flask(__name__)
 swagger = Swagger(app)
@@ -153,7 +153,7 @@ class Products(Resource):
         size = int(request.args.get('size', 10))
         options = request.get_json()
         brands = Product.query.with_entities(Product.brand).distinct()
-        #make list from brands
+        # make list from brands
         barnds_lsit = [brand[0] for brand in brands]
         print(barnds_lsit)
         included_brands = options.get('included_brands', barnds_lsit)
@@ -169,10 +169,13 @@ class Products(Resource):
 
         sort_order = options.get('sort_order', 'abc')
 
-        products = Product.query.filter(Product.brand.in_(included_brands),
-                                        Product.category.in_(included_categories),
-                                        Product.price.between(min_price, max_price),
-                                        Sizes.sizeName.in_(included_sizes)).all()
+        products = Product.query \
+            .join(Sizes, Product.id == Sizes.product_id) \
+            .filter(Product.brand.in_(included_brands),
+                    Product.category.in_(included_categories),
+                    Product.price.between(min_price, max_price),
+                    and_(Sizes.sizeName.in_(included_sizes), Sizes.amountSize > 0)) \
+            .all()
         if sort_order == 'abc':
             products = sorted(products, key=lambda x: x.name)
         elif sort_order == 'price_desc':
@@ -180,6 +183,7 @@ class Products(Resource):
         elif sort_order == 'price':
             products = sorted(products, key=lambda x: x.price, reverse=True)
 
+        size_total = len(products)
         products = products[(page - 1) * size:page * size]
 
         serialized_products = []
@@ -188,14 +192,16 @@ class Products(Resource):
             images = [image.image for image in images]
             header_image = HeaderImage.query.filter_by(product_id=product.id).all()
             header_image = [image.image for image in header_image]
-            sizes_c = Sizes.query.filter_by(product_id=product.id).filter(Sizes.sizeName.in_(included_sizes), Sizes.amountSize > 0).all()
+            sizes_c = Sizes.query.filter_by(product_id=product.id).filter(Sizes.sizeName.in_(included_sizes),
+                                                                          Sizes.amountSize > 0).all()
             if not sizes_c:
+                print('continue')
                 continue
             else:
                 sizes = Sizes.query.filter_by(product_id=product.id).all()
                 serialized_product = {
                     'id': product.id,
-                    "brand" : product.brand,
+                    "brand": product.brand,
                     'name': product.name,
                     'price': product.price,
                     "description": product.description,
@@ -208,7 +214,7 @@ class Products(Resource):
                 serialized_products.append(serialized_product)
 
         return {
-            "total": len(serialized_products),
+            "total": size_total,
             'products': serialized_products}
 
 
@@ -254,7 +260,6 @@ class GetProduct(Resource):
 
 
 class isExistSizes(Resource):
-
 
     def post(self):
         """
@@ -318,7 +323,7 @@ class isExistSizes(Resource):
             if product is None:
                 d['product'] = None
             else:
-                d['product'] ={
+                d['product'] = {
                     'id': product.id,
                     'name': product.name,
                     'price': product.price,
@@ -326,7 +331,8 @@ class isExistSizes(Resource):
                     "category": product.category,
                     "images": [image.image for image in Image.query.filter_by(product_id=product.id).all()],
                     "header_image": [image.image for image in HeaderImage.query.filter_by(product_id=product.id).all()],
-                    "sizes": [{"sizeName": size.sizeName, "amountSize": size.amountSize} for size in Sizes.query.filter_by(product_id=product.id).all()],
+                    "sizes": [{"sizeName": size.sizeName, "amountSize": size.amountSize} for size in
+                              Sizes.query.filter_by(product_id=product.id).all()],
                     "InStock": True if Sizes.query.filter_by(product_id=product.id).all() else False,
                 }
             if size is None:
